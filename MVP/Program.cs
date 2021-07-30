@@ -20,7 +20,7 @@ namespace MVP
             Application.SetCompatibleTextRenderingDefault(false);
 
             var view = new MainView();
-            var presenter = new MainPresenter(view);
+            var presenter = new MainPresenter(view); 
 
             Application.Run(view);
         }

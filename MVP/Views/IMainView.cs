@@ -11,7 +11,7 @@ namespace MVP.Views
     {
         EventHandler<EventArgs> AddButtonClicked { get; set; }
         EventHandler<EventArgs> LoadButtonClicked { get; set; }
-        List<Car> Cars { get; set; }
+        List<Car> Cars {set; }
         string ModelText { get; set; }
         string VendorText { get; set; }
         string ColorText { get; set; }

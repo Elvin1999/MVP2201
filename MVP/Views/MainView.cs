@@ -16,11 +16,14 @@ namespace MVP
     {
         public EventHandler<EventArgs> AddButtonClicked { get; set; }
         public EventHandler<EventArgs> LoadButtonClicked { get; set; }
-        public List<Car> Cars { get; set ; }
-        public string ModelText { get; set ; }
-        public string VendorText { get; set; }
-        public string ColorText { get; set; }
-        public string TransmissionText { get; set; }
+        public List<Car> Cars { set {
+                carListbox.DataSource = null;
+                carListbox.DataSource = value;
+            } }
+        public string ModelText { get => modelTxtb.Text; set => modelTxtb.Text = value; }
+        public string VendorText { get => vendorTxtb.Text; set => vendorTxtb.Text = value; }
+        public string ColorText { get => colorTxtb.Text; set => colorTxtb.Text = value; }
+        public string TransmissionText { get => transmissionTxtb.Text; set => transmissionTxtb.Text = value; }
         public string YearText { get; set; }
 
         public Form1()
@@ -28,14 +31,15 @@ namespace MVP
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            AddButtonClicked.Invoke(sender, e);
+        }
 
+        private void loadBtn_Click(object sender, EventArgs e)
+        {
+            LoadButtonClicked.Invoke(sender, e);
         }
     }
 }

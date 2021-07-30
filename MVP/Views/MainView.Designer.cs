@@ -52,7 +52,6 @@
             this.label1.Size = new System.Drawing.Size(76, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Model";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -164,6 +163,7 @@
             this.loadBtn.TabIndex = 12;
             this.loadBtn.Text = "Load Cars";
             this.loadBtn.UseVisualStyleBackColor = true;
+            this.loadBtn.Click += new System.EventHandler(this.loadBtn_Click);
             // 
             // Form1
             // 
